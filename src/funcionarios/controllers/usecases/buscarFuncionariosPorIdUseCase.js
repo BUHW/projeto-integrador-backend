@@ -11,6 +11,6 @@ exports.buscarFuncionariosPorId = async (req, res, next) => {
 
         return res.status(200).json({ conteudo: funcionario });
     } catch (e) {
-        res.status(500).json({ error: 'Erro ao enocntrar Funcionário: ' + e.message})
+        res.status(500).json({ error: 'Erro ao enocntrar funcionário: ' + e.message})
     }
 }

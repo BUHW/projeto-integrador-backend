@@ -5,7 +5,7 @@ exports.editarFuncionarios = async (req, res, next) => {
     try {
         let funcionarioExistente = null;
         if (req.body.email) {
-            funcionarioExistente = await db.Funcionarios.findOne({
+            funcionarioExistente = await db.funcionarios.findOne({
                 where: {
                     email: req.body.email,
                     id: {
@@ -16,7 +16,7 @@ exports.editarFuncionarios = async (req, res, next) => {
         }
 
         if (!funcionarioExistente) {
-            const funcionarioAtualizado = await db.Funcionarios.update(req.body, { where: { id: req.params.id } });
+            const funcionarioAtualizado = await db.funcionarios.update(req.body, { where: { id: req.params.id } });
             
             if (funcionarioAtualizado[0] > 0) {
                 res.status(200).json({ Mensagem: 'Funcionário Atualizado' });

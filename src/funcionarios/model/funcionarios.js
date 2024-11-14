@@ -12,7 +12,7 @@ function model(sequelize){
             primaryKey: true,
         },
         nome: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
         i_especialidade: {

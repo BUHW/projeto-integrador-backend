@@ -3,7 +3,7 @@ const { Op } = require('sequelize');
 
 exports.cancelarFuncionarios = async (req, res, next) => {
     try {
-        const funcionario = await db.Funcionarios.update(
+        const funcionario = await db.funcionarios.update(
             { cancelado: true },
             { where: { id: req.params.id } }
         );
@@ -15,6 +15,6 @@ exports.cancelarFuncionarios = async (req, res, next) => {
         }
     } catch (e) {
         console.log(e);
-        res.status(500).json({ Mensagem: 'Erro interno do servidor' });
+        res.status(500).json({ Mensagem: 'Erro ao cancelar funcionário' });
     }
 };

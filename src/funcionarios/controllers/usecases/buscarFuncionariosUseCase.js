@@ -15,6 +15,6 @@ exports.buscarFuncionarios = async (req, res, next) => {
     
         return res.status(200).json({ conteudo: funcionarios });
     } catch (e) {
-        res.status(500).json({ error: 'Funcionários não encontrados' + e.message})
+        res.status(500).json({ error: 'Erro ao encontrar funcionários' + e.message})
     }
 }

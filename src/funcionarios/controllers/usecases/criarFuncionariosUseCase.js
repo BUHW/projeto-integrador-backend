@@ -8,6 +8,6 @@ exports.criarFuncionarios = async (req, res, next) => {
 
         return res.status(201).json({ conteudo: funcionario });
     } catch (e) {
-        res.status(500).json({ error: 'Erro ao criar funcionário: ' + e.message})
+        res.status(500).json({ error: 'Erro ao criar funcionário ' + e.message})
     }
 }
