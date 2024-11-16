@@ -4,7 +4,7 @@ const cancelarAlunosUseCase = require('./usecases/cancelarAlunosUseCase');
 const criarAlunosUseCase = require('./usecases/criarAlunosUseCase');
 const editarAlunosUseCase = require('./usecases/editarAlunosUseCase');
 
-exports.AlunosController = {
+exports.alunosController = {
     buscarAlunosPorId: buscarAlunosPorIdUseCase.buscarAlunosPorId,
     buscarAlunos: buscarAlunosUseCase.buscarAlunos,
     cancelarAlunos: cancelarAlunosUseCase.cancelarAlunos,
