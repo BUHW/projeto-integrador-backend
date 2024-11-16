@@ -11,6 +11,6 @@ exports.buscarResponsaveisPorId = async (req, res, next) => {
 
         return res.status(200).json({ conteudo: responsavel });
     } catch (e) {
-        res.status(500).json({ error: 'Erro ao enocntrar responsável: ' + e.message})
+        res.status(500).json({ error: 'Erro ao encontrar responsável: ' + e.message})
     }
 }

@@ -1,10 +1,10 @@
 const db = require('../../../utils/database/database_postgres')
 
 exports.criarResponsaveis = async (req, res, next) => {
-    const { nome, email, senha } = req.body;
+    const { nome, contato, endereco } = req.body;
 
     try {
-        const responsavel = await db.responsaveis.create({ nome, email, senha });
+        const responsavel = await db.responsaveis.create({ nome, contato, endereco });
 
         return res.status(201).json({ conteudo: responsavel });
     } catch (e) {
